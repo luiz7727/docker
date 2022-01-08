@@ -17,3 +17,18 @@ Host e container compartilham o Kernel.
 
 
 Empacota software com vários níveis de isolamento
+
+Por que não usar uma máquina virtual ?
+
+*isolamento do sistema
+*elasticidade (aumentar e diminuir a quantidade de recursos)
+Capacidade de dimencionar quanto de memória precisa, por exemplo.
+
+O container tem uma vantagem muito grande sobre as máquinas virtuais, é a quantidade de recursos que ele consome ao ser executado.
+
+Exemplos:
+ 
+1-É possível startar um container em menos de um segundo, sendo uma máquina virtual levaria em torno de 1 minuto.
+
+2-A quantidade de memória que um container usa, é absurdamente menor do que uma máquina virtual.
+
