@@ -1,0 +1,19 @@
+O que é o Docker ?
+R: É uma tecnologia de virtualização, e não um sistema de virtualização tradicional(baseado em máquinas virtuais).O docker é uma engine de administração de containers, ou seja, ela é um serviço que vai administrar os containers que vc cria a partir do docker.
+
+Container = é um processo isolado do seu sistema que a partir daquele processo, vc pode startar as suas aplicações de forma isolada do sistema host(fora daquela máquina que o container foi criado) e associado a esse container existe tbm um sistema de arquivos completos isolados para que vc possa executar o seu software dentro de um ambiente o mais controlável possível.
+
+Por que o Docker não é uma máquina virtual ?
+Porque esse processo segregado(container) junto desse sistema de arquivo isolados, ele precisa de várias coisas da máquina host, ele não vai executar o container de forma totalmente independente da máquina host, porque vários recursos serão compartilhados(como por exemplo o Kernel).E isso faz com que o container tenha uma nessecidade de memória e de processamento muito menor do que uma máquina virtual precisa.
+
+O Docker se baseia em uma tecnologia chamada LXC(linux Containers)
+
+Docker é Open Source e Escrita em Go
+
+O tipo de virtualização que o docker usa é baseado em software(SO)
+SO = Sistema Operacional.
+
+Host e container compartilham o Kernel.
+
+
+Empacota software com vários níveis de isolamento
