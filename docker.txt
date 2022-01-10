@@ -32,3 +32,14 @@ Exemplos:
 
 2-A quantidade de memória que um container usa, é absurdamente menor do que uma máquina virtual.
 
+O que são container ?
+
+-Processo segregado no mesmo Kernel(isolamento) da máquina host
+-Sistema de arquivos criados a partir de uma imagem
+-Ambientes leves e portáteis no qual aplicações são executadas
+-Encapsula todos os binários e bibliotecas necessárias para execução de um App
+-Algo entre um 	chroot uma VM
+
+Obs:chroot, comando que redefine a pasta raiz para um determinado processo que vc deseja executar.
+
+Obs:Focar um container no uso de uma aplicação só.Por exemplo:Um container para o banco de dados, outro para o backend e outro para o frontend
