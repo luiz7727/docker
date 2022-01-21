@@ -211,4 +211,4 @@ Primeiro Build com docker
 3 - RUN echo '<h1>Hello World from Firt deploy!</h1>' > /usr/share/nginx/html/index.html vou mandar a saída desse "echo" para a pasta onde o nginx vai ler.Com isso se a imagem que vc estiver se baseando, tiver 3 layers, com o novo comando seu, a sua imagem vai ter 4 layers.
 4 - Entrar no terminal na pasta que foi criado o arquivo Dockerfile
 5 - docker image build -t nameTag .(-t = tag que vc quer colocar)
-
+6 - docker container run -p 80:80 nameTag
