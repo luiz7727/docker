@@ -74,3 +74,12 @@ Arquitetura
 DAEMON = docker server = docker engine.O cli(terminal) é conectado com o DAEMON que é a partir dele que vc cria as imagens, que vai lá no registry do docker(site do docker hub, e nele contem um monte de imagens já pronta).
 
 CLI(terminal) -> DAEMON -> docker hub(baixar a imagem) -> devolve ela -> criar os containers
+
+Hello World no docker
+
+* Comando para dar hello world: docker container run hello-world
+
+Pode dar um possível erro de permisão de usuário, com isso rode esse comando no terminal:
+sudo usermod -aG nomeuser
+reinicie a máquina e depois rode o comando caso não funcione, rode esse comando:
+docker run hello-world
