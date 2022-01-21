@@ -109,5 +109,10 @@ docker run --rm nomeImage COMMAND ou docker container run --rm nomeImage COMMAND
 O comando run sempre criar novos container
 
 docker container run -it nameImage ou docker run -it nameImage  = entra no terminal do container.
-Se vc executar o comando acima duas vezes, vc está criando dois containers.Ou seja, se vc criar uma pasta em um container.Nã vai aparecer no outro.
+Se vc executar o comando acima duas vezes, vc está criando dois containers.Ou seja, se vc criar uma pasta em um container.Não vai aparecer no outro.
 
+Containers devem ter nomes únicos 
+
+Comando para atribuir um nome para o container:
+docker run --name nameContainer -it image command ou docker container run --name nameContainer -it image command  
+Não consegue criar containers com o mesmo nome.
