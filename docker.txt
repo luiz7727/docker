@@ -203,3 +203,12 @@ Docker Hub vs Docker Registry
 
 Docker Registry é um serviço server side para registro e obtenção de imagem.Api basicamente.
 Docker Hub é um SAS, é um produto na nuvem disponibilizado pelo docker.O docker hub contem o registry dentro dele, mas ele tem uma interface gráfica
+
+
+Primeiro Build com docker
+1 - Criar um docker file  
+2 - FROM nginx:lastest Se vc quer que a sua imagem seje baseada de qual imagem
+3 - RUN echo '<h1>Hello World from Firt deploy!</h1>' > /usr/share/nginx/html/index.html vou mandar a saída desse "echo" para a pasta onde o nginx vai ler.Com isso se a imagem que vc estiver se baseando, tiver 3 layers, com o novo comando seu, a sua imagem vai ter 4 layers.
+4 - Entrar no terminal na pasta que foi criado o arquivo Dockerfile
+5 - docker image build -t nameTag .(-t = tag que vc quer colocar)
+
