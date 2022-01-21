@@ -97,4 +97,17 @@ O comando run é a concatenação de 4 comandos, se pensarmos bem.Pois ele baixa
 
 Modo interativo é voce poder ver todo o processo no terminal da execução.
 
+Comandos Docker
+
+docker container ps ou docker ps = para ver quais containers estão rodando
+docker container ps -a ou docker container ps -a = mostra todos os containers que tem instalado, independente se está rodando ou não
+
+docker run --rm nomeImage COMMAND ou docker container run --rm nomeImage COMMAND = executa o container e quando terminar o processo, eu quero que ele automaticamente remova da lista de containers
+
+-it  i = modo interativo t = acesso ao terminal
+
+O comando run sempre criar novos container
+
+docker container run -it nameImage ou docker run -it nameImage  = entra no terminal do container.
+Se vc executar o comando acima duas vezes, vc está criando dois containers.Ou seja, se vc criar uma pasta em um container.Nã vai aparecer no outro.
 
