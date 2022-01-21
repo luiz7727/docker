@@ -142,3 +142,17 @@ docker run -p 8080:80 -v pastaHost:pastaDentroDoContainer ou docker container ru
 
 pwd = caminho da pasta atual
 docker run -p 8080:80 -v $(pwd):pastaDentroDoContainer
+
+
+Executando o container em background
+-d(daemon)
+docker run -d --name ex-daemon-basic -p 8080:80 $(pwd):/usr/share/nginx/html
+ ou
+docker container run -d --name ex-daemon-basic -p 8080:80 $(pwd):/usr/share/nginx/html
+com isso ele retorna uma string com uma série de caracteres(id do container gerado).Com isso o container está sendo executado em modo de background.
+
+Para verificar
+docker ps
+
+Para parar o container
+docker stop nameContainer
