@@ -67,3 +67,10 @@ Container está relacionado com o processo, e o processo quando executado está 
 
 (fazendo uma relação com Orientação a Objetos)
 Temos a imagem(modelo,classe) usada como classe para criar os containers, que seria os objetos.
+
+
+Arquitetura
+
+DAEMON = docker server = docker engine.O cli(terminal) é conectado com o DAEMON que é a partir dele que vc cria as imagens, que vai lá no registry do docker(site do docker hub, e nele contem um monte de imagens já pronta).
+
+CLI(terminal) -> DAEMON -> docker hub(baixar a imagem) -> devolve ela -> criar os containers
