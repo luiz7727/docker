@@ -188,3 +188,18 @@ docker rm para remover containers
 
 comando para remover imagens:
 docker image rm nameImage
+
+
+Comandos básicos no gerenciamento de imagens
+docker image pull(responsável por baixar a imagem no docker hub)
+docker image ls( mostra as imagens)
+docker image rm nameTag
+docker image inspect
+docker image tag nameImageOrigin nomeDaTagQueQUerColocar (passsa dois parametro)
+docker image build
+docker image push (serve para mandar a imagem para algum lugar, como por exemplo docker hub)
+
+Docker Hub vs Docker Registry
+
+Docker Registry é um serviço server side para registro e obtenção de imagem.Api basicamente.
+Docker Hub é um SAS, é um produto na nuvem disponibilizado pelo docker.O docker hub contem o registry dentro dele, mas ele tem uma interface gráfica
