@@ -121,3 +121,13 @@ Não consegue criar containers com o mesmo nome.
 Reutilizar containers
 docker start -ai ou docker container start -ai (a = apache, vou ter acesso ao terminal) ( o i é do modo interativo)
 * Colocar nomes significantes, com isso vc pode fazer as operações com tranquilidade
+
+
+Mapeando portas dos containers
+-p = port
+porta 8080 porta que vai ser exposta para fora do container
+porta 80 é a porta interna que nginx vai startado
+docker run -p 8080:80 nameImage
+
+Depois é só rodar esse comando no terminal para ver o resultado:
+curl http://localhost:8080 ou vc pode acessar o localhost:8080 no navegador mesmo
