@@ -269,3 +269,4 @@ Coordenando Mútiplos Containers
 
 Gerenciamento de micro service
 micro service = serviços diferentes, ciclos diferentes, deploys diferentes e esses serviços juntos formam uma aplicação
+docker-compose.yml formato de arquivo usado pelo compose
