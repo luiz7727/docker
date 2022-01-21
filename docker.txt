@@ -131,3 +131,14 @@ docker run -p 8080:80 nameImage
 
 Depois é só rodar esse comando no terminal para ver o resultado:
 curl http://localhost:8080 ou vc pode acessar o localhost:8080 no navegador mesmo
+
+
+Mapeando diretórios para o container
+
+mapear um pasta do computador host para o container
+flag -v para mapear um volume 
+
+docker run -p 8080:80 -v pastaHost:pastaDentroDoContainer ou docker container run -p 8080:80 -v pastaHost:pastaDentroDoContainer
+
+pwd = caminho da pasta atual
+docker run -p 8080:80 -v $(pwd):pastaDentroDoContainer
