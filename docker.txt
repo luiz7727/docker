@@ -217,3 +217,20 @@ Primeiro Build com docker
 Criando imagem com parametros
 FROM debian
 LABEL maintainer(maintainer = quem é o mantenedor da imagem) 
+
+Visão Geral e Tipos de Redes
+O docker usa o modelo Bridge
+
+Bridge serve tbm como mecanismo de isolamento da rede
+
+1-Container A(com a interface de rede por baixo)
+2-Bridge
+3-Host
+4-Internet
+
+Tipos de Redes
+* None Network(container não tem acesso a rede e tbm não acessa outros containers locais)
+  docker container run -d --net none nameImage
+* Bridge Network(Padrão) Ponte que o docker cria entre as interfaces de rede dos containers e a interface de rede do host
+* Host Network(tirar a camada bridge e ter acesso diretamente com a interface de rede do host)
+* Overlay Network(Swarm)
