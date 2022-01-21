@@ -232,7 +232,7 @@ Tipos de Redes
 * None Network(container não tem acesso a rede e tbm não acessa outros containers locais)
   docker container run -d --net none nameImage
 * Bridge Network(Padrão) Ponte que o docker cria entre as interfaces de rede dos containers e a interface de rede do host
-* Host Network(tirar a camada bridge e ter acesso diretamente com a interface de rede do host)
+* Host Network(tirar a camada bridge e ter acesso diretamente com a interface de rede do host, menos adequado)
 * Overlay Network(Swarm)
 
 Pingando um container com o otro
@@ -262,3 +262,10 @@ docker network disconnect bridge nameContainer
 Testar a conectividade de uma máquina com a outra, elas sendo conectadas na mesma rede:
 docker container exec -it container1 ping 172.17.0.3(esse é o ping do segundo container)
 
+
+Coordenando Mútiplos Containers
+ -Muito usado para aplicações e o frontend está em um container e o backend está em outro container.
+ Para isso muito usado o docker compose, que ele starta os containers para vc.Ao invés de vc ficar startando um por um
+
+Gerenciamento de micro service
+micro service = serviços diferentes, ciclos diferentes, deploys diferentes e esses serviços juntos formam uma aplicação
