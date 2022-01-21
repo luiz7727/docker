@@ -185,3 +185,6 @@ Retorna o tipo de sistema que está sendo executado dentro do container.
 
 docker rmi idVolume serve para remover imagem
 docker rm para remover containers
+
+comando para remover imagens:
+docker image rm nameImage
