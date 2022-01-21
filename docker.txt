@@ -47,7 +47,7 @@ Obs:Focar um container no uso de uma aplicação só.Por exemplo:Um container pa
 O que são imagens Docker ?
 1-Uma imagem é o modelo de sistema de arquivo somente-leitura usado para criar container.
 2-Imagens são criadas através de um processor chamado build ou pelo commit, mas o commit não é uma boa prática.
-3-São armazenadas em repositório Registry
+3-São armazenadas em repositório Registry(no caso é o docker hub)
 4-São compostas por uma ou mais camadas(famosas layers)
 5-Uma camada representa um ou mais mudanças no sistema de arquivo
 6-Uma camada é tabmém chmada de imagem intermediária
@@ -83,3 +83,18 @@ Pode dar um possível erro de permisão de usuário, com isso rode esse comando 
 sudo usermod -aG nomeuser
 reinicie a máquina e depois rode o comando caso não funcione, rode esse comando:
 docker run hello-world
+
+
+Comando Run
+O comando run é a porta de entrada para o mundo docker, por que ele agrupa uma série de comandos a partir do comando run.
+A partir do comando run a gente baixou uma imagem, caso ela não exista.Ciração de um container, execução de um container.
+O comando run é a concatenação de 4 comandos, se pensarmos bem.Pois ele baixa a imagem caso não tenha, cria o container,starta o container e executa ele
+
+1 - docker pull nomeImage(baixa imagem do Repository, é o docker hub)
+2 - docker container create (criar o container)
+3 - docker container start (startar o container)
+4 - docker container exec (execução do container em modo interativo)
+
+Modo interativo é voce poder ver todo o processo no terminal da execução.
+
+
