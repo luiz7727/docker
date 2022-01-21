@@ -116,3 +116,8 @@ Containers devem ter nomes únicos
 Comando para atribuir um nome para o container:
 docker run --name nameContainer -it image command ou docker container run --name nameContainer -it image command  
 Não consegue criar containers com o mesmo nome.
+
+
+Reutilizar containers
+docker start -ai ou docker container start -ai (a = apache, vou ter acesso ao terminal) ( o i é do modo interativo)
+* Colocar nomes significantes, com isso vc pode fazer as operações com tranquilidade
