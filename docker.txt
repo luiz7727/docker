@@ -234,3 +234,31 @@ Tipos de Redes
 * Bridge Network(Padrão) Ponte que o docker cria entre as interfaces de rede dos containers e a interface de rede do host
 * Host Network(tirar a camada bridge e ter acesso diretamente com a interface de rede do host)
 * Overlay Network(Swarm)
+
+Pingando um container com o otro
+1 - Criar dois containers e abrir o inspect
+2 - docker container exec -it container1 ping 172.17.0.3(esse é o ping do segundo container) 
+
+comandos para criar uma nova rede 
+docker network create --driver bridge  rede_nova
+--driver seria os tipos de redes que docker contain
+Com isso ele cria outra faixa "172.18.0.0/16", pois o padrão é 172.17.0.0/16
+
+criando o container com a nova rede
+docker container run -d --name container3 --net rede_nova
+
+Se vc tentar pingas esse novo container com a nova rede com um outro container que contem a faixa diferente, vc não vai conseguir logo de cara.
+
+Para resolver isso, precisamos configurar o container para se conectar com a rede bridge
+
+docker network connect bridge nameContainer
+Com isso o container vai ter acesso tanto com a rede nova, tanto com a rede normal que vem por padrão.
+
+Caso queira desconectar o container da rede bridge:
+docker network disconnect bridge nameContainer
+
+
+
+Testar a conectividade de uma máquina com a outra, elas sendo conectadas na mesma rede:
+docker container exec -it container1 ping 172.17.0.3(esse é o ping do segundo container)
+
