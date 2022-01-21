@@ -165,3 +165,23 @@ docker start nameContainer ou docker container start nameContainer
 
 comando para restartar o container:
 docker restart nameContainer ou docker container restart nameContainer
+
+
+Manipulação de containers em modo daemon
+
+Acessando logs de um container:
+
+docker container logs nameContainer
+
+Ele retorna os logs que foram executados
+
+Acessando o inspect de um container
+docker container inspect ex-daemon-basic
+
+Ele retorna no formato json toda as características do container
+
+docker container exec nameContainer uname -or
+Retorna o tipo de sistema que está sendo executado dentro do container.
+
+docker rmi idVolume serve para remover imagem
+docker rm para remover containers
