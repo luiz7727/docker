@@ -156,3 +156,12 @@ docker ps
 
 Para parar o container
 docker stop nameContainer
+
+
+Gerenciando container em background
+
+comando para executar o container:
+docker start nameContainer ou docker container start nameContainer 
+
+comando para restartar o container:
+docker restart nameContainer ou docker container restart nameContainer
