@@ -43,3 +43,27 @@ O que são container ?
 Obs:chroot, comando que redefine a pasta raiz para um determinado processo que vc deseja executar.
 
 Obs:Focar um container no uso de uma aplicação só.Por exemplo:Um container para o banco de dados, outro para o backend e outro para o frontend
+
+O que são imagens Docker ?
+1-Uma imagem é o modelo de sistema de arquivo somente-leitura usado para criar container.
+2-Imagens são criadas através de um processor chamado build ou pelo commit, mas o commit não é uma boa prática.
+3-São armazenadas em repositório Registry
+4-São compostas por uma ou mais camadas(famosas layers)
+5-Uma camada representa um ou mais mudanças no sistema de arquivo
+6-Uma camada é tabmém chmada de imagem intermediária
+7-A junção dessas camadas formm a imagem
+8-A apenas a útlima camada pode ser alterar quadno o contianer for iniciado
+9-AUFS(Advanced multi-layered unification filesystem) é muito usado.Um sistema de arquivo baseado em layer.
+10-O grande objetivo dessa estratégia de dividir uma iamgem em cadams é o reuso 
+11 -É possível compor imagens a partir de camadas de outras imagens.
+
+Porque o commit é ruim ?
+R:Imagine que vc tem acesso a esse container a partir do terminal, no final tudo que vc alterou vc quer criar uma imagem, a partir desse container.Usando o comando commit, ele vai pegar tudo que vc alterou no seu container e salva como imagem.
+O problema é que vc não tem como replicar o que vc fez, vc não tem um rastro do que vc fez.
+
+Container vs Image
+
+Container está relacionado com o processo, e o processo quando executado está na memória do computador.
+
+(fazendo uma relação com Orientação a Objetos)
+Temos a imagem(modelo,classe) usada como classe para criar os containers, que seria os objetos.
