@@ -212,3 +212,8 @@ Primeiro Build com docker
 4 - Entrar no terminal na pasta que foi criado o arquivo Dockerfile
 5 - docker image build -t nameTag .(-t = tag que vc quer colocar)
 6 - docker container run -p 80:80 nameTag
+
+
+Criando imagem com parametros
+FROM debian
+LABEL maintainer(maintainer = quem é o mantenedor da imagem) 
